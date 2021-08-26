@@ -8,7 +8,7 @@ const cors = require('cors')
 // loads the variables into the process.env
 env.config()
 app.use(express.json())
-app.use(cors)
+app.use(cors())
 app.use('/api/v1/', router)
 
 const start = async () => {

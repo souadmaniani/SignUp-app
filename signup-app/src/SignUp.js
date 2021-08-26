@@ -20,7 +20,8 @@ const SignUp = () => {
 	const changePassword = (event)=> {
 		setpassword(event.target.value)
 	}
-	const Submit = () => {
+	const Submit = (event) => {
+		event.preventDefault()
 		const data = {
 			fullName: fullName,
 			userName: userName,
@@ -28,7 +29,7 @@ const SignUp = () => {
 			password: password
 		}
 		axios.post(`http://localhost:4000/api/v1/signup`, data)
-		.then((res) => console.log(res.data))
+		.then((res) => console.log(res))
 		.catch((err) => console.log(err))
 		setfullName('')
 		setuserName('')
