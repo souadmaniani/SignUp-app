@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SignUp from './SignUp'
+
 
 ReactDOM.render(
-    <div>
-      <h1>hello from react</h1>
-    </div>
+	<SignUp/>
   ,document.getElementById('root')
 );
+
