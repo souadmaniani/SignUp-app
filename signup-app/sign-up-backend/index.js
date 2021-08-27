@@ -5,9 +5,11 @@ const router = require('./routes/routes')
 const connectDB = require('./db/connect')
 const env = require('dotenv')
 const cors = require('cors')
+
 // loads the variables into the process.env
 env.config()
 app.use(express.json())
+// cross-origin resource sharing
 app.use(cors())
 app.use('/api/v1/', router)
 
